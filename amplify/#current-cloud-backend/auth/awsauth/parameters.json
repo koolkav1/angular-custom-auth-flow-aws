@@ -1,0 +1,60 @@
+{
+    "identityPoolName": "mfa1aws",
+    "allowUnauthenticatedIdentities": true,
+    "thirdPartyAuth": false,
+    "lambdaLogPolicy": "awsauth_lambda_log_policy",
+    "openIdLambdaRoleName": "awsauth_openid_lambda_role",
+    "openIdRolePolicy": "awsauth_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "awsauth_openid_lambda_iam_policy",
+    "openIdLogPolicy": "awsauth_openid_lambda_log_policy",
+    "userPoolName": "mfauserpool",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "ON",
+    "mfaTypes": [
+        "TOTP"
+    ],
+    "roleName": "awsauth_sns-role",
+    "roleExternalId": "awsauth_role_external_id",
+    "policyName": "awsauth-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Uppercase",
+        "Requires Numbers",
+        "Requires Symbols"
+    ],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientName": "awsauth_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "awsauth_totp_lambda_role",
+    "mfaLambdaLogPolicy": "awsauth_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "awsauth_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "awsauth_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "awsauth_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "awsauth_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "awsauth_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": true,
+    "useDefault": "manual",
+    "authSelections": "identityPoolAndUserPool",
+    "resourceName": "awsauth",
+    "userpoolClientWriteAttributes": [
+        "email"
+    ],
+    "unAuthRoleName": "usev631demo-20181005143337-unauthRole",
+    "authRoleName": "usev631demo-20181005143337-authRole",
+    "unAuthRoleArn": "arn:aws:iam::578193216916:role/usev631demo-20181005143337-unauthRole",
+    "authRoleArn": "arn:aws:iam::578193216916:role/usev631demo-20181005143337-authRole"
+}

@@ -1,0 +1,40 @@
+@mixin challenge-theme($theme) {
+
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+    $accent: map-get($theme, accent);
+    $is-dark: map-get($theme, is-dark);
+
+    challenge {
+
+        #challenge {
+
+            #challenge-intro {
+                color: white;
+            }
+
+            #challenge-form-wrapper {
+                @if ($is-dark) {
+                    background: mat-color($fuse-navy, 600);
+                } @else {
+                    background: map-get($background, card);
+                }
+
+                #challenge-form {
+                    
+                    .separator {
+                        color: map-get($foreground, divider);
+
+                        .text {
+
+                            &:before,
+                            &:after {
+                                border-top-color: map-get($foreground, divider);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

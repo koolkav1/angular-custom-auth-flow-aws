@@ -1,0 +1,9 @@
+{
+    "bucketName": "fusev631demod8cb642173e2417dba93d93a5e8ce05a",
+    "authPolicyName": "s3_amplify_4ecc992b",
+    "unauthPolicyName": "s3_amplify_4ecc992b",
+    "authRoleName": "usev631demo-20181005143337-authRole",
+    "unauthRoleName": "usev631demo-20181005143337-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": "r"
+}

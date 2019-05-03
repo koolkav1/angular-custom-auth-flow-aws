@@ -1,0 +1,41 @@
+<div id="confirm" fxLayout="column">
+
+    <div id="confirm-form-wrapper" fxLayout="column" fxLayoutAlign="center center">
+
+        <div id="confirm-form" [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}">
+
+            <div class="logo">
+                <img src="assets/images/logos/fuse.svg">
+            </div>
+
+            <div class="title">Confirm Your Email Address</div>
+           
+
+            <form name="confirmForm" [formGroup]="confirmForm" (ngSubmit)="confirm()">
+
+
+                <mat-form-field>
+                    <input matInput type="password" 
+                    placeholder="Enter Code"
+                     formControlName="confirm">
+                    <mat-error>
+                        confirm is required
+                    </mat-error>
+                </mat-form-field>
+
+          
+              
+
+                <button mat-raised-button color="accent" class="submit-button" aria-label="LOG IN"
+                        [disabled]="confirmForm.invalid">
+                    confirm
+                </button>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</div>
